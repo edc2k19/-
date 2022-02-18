@@ -1,0 +1,10 @@
+version: "2.0"
+services:
+  fw-rebirth-docker:
+    container_name: fw-rebirth-docker
+    image: mrzillagold/fw-rebirth:latest
+    volumes:
+      - /opt/fw-rebirth/config.json:/usr/src/fw-rebirth/config.json
+    restart: always
+    tmpfs:
+      - /tmp
